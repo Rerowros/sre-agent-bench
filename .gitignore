@@ -1,0 +1,27 @@
+# Real stand inventory and SSH state: never commit
+servers*.json
+!config/servers.example.json
+known_hosts*
+.secrets/
+*.pem
+*.key
+id_*
+
+# Generated per-model prompts contain SSH commands with real hosts
+prompts/*
+!prompts/TEMPLATE.md
+
+# Raw traces may contain commands, configs and disposable-server secrets
+traces/
+
+# Local run output (deploy logs, raw verifier JSON, fresh metrics).
+# Curated, anonymized results live in dated subfolders such as results/2026-08/.
+results/*.log
+results/*.json
+
+# Editor / OS noise
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+__pycache__/

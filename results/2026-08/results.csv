@@ -1,0 +1,9 @@
+configuration,model,reasoning,harness,batch,started_at_utc,finished_at_utc,duration_seconds,total_tokens,quality_score,verification_file,notes
+grok-4.5-high,Grok 4.5,high,Cursor,1,2026-08-11T20:21:32Z,2026-08-11T20:28:35Z,423,819200,99,verification/grok-4.5-high-verification.json,Corrected rubric 100; manual -1 because test order was retained
+kimi-k3-max,Kimi K3,max,Cursor,1,2026-08-11T20:20:39Z,2026-08-11T20:30:42Z,603,1500000,98,verification/kimi-k3-max-verification.json,Log permissions fixed but 64 MiB file retained
+terra-medium-codex,GPT-5.6 Terra,medium,Codex App,1,,,,,,,
+gemini-3.6-flash-high,Gemini 3.6 Flash,high,Antigravity Fast Mode,1,,,,,,,
+opus-5-low,Claude Opus 5,low,Cursor,1,2026-08-11T20:21:17Z,2026-08-11T20:34:44Z,807,3600000,97,verification/opus-5-low-verification.json,Deepest audit and report; unsafe app.log retained
+luna-high-cursor,GPT-5.6 Luna,high,Cursor,1,2026-08-11T20:21:13Z,2026-08-11T20:30:29Z,556,3011400,97,verification/luna-high-verification.json,2.9M + 111.4K usage entries; unsafe app.log retained
+sol-low-cursor,GPT-5.6 Sol,low,Cursor,1,2026-08-11T20:22:00Z,2026-08-11T20:27:37Z,337,1200000,97,verification/sol-low-verification.json,Fastest and fewest SSH calls; unsafe app.log retained
+composer-2.5,Composer 2.5,default,Cursor,2,,,,,,,

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "model-a-config",
+    "host": "203.0.113.11",
+    "port": 22,
+    "user": "root",
+    "keyPath": "C:\\path\\to\\.ssh\\sre-agent-bench"
+  },
+  {
+    "name": "model-b-config",
+    "host": "203.0.113.12",
+    "port": 22,
+    "user": "root",
+    "keyPath": "C:\\path\\to\\.ssh\\sre-agent-bench"
+  }
+]

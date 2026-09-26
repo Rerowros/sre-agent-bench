@@ -1,0 +1,4 @@
+* text=auto
+# Files uploaded to Linux stands must keep LF endings on Windows checkouts
+*.sh text eol=lf
+server/** text eol=lf

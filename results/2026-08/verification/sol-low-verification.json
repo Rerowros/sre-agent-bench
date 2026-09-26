@@ -1,0 +1,129 @@
+{
+  "name": "sol-low",
+  "verifiedAtUtc": "2026-08-11T20:50:50.5562529Z",
+  "deep": true,
+  "earnedPoints": 87,
+  "maxPoints": 100,
+  "qualityScore": 87,
+  "checks": [
+    {
+      "check": "HTTP health and database connectivity",
+      "weight": 8,
+      "passed": true,
+      "skipped": false,
+      "detail": "{\"database\":\"orders_benchmark\",\"status\":\"ok\"}"
+    },
+    {
+      "check": "Original seed data preserved",
+      "weight": 12,
+      "passed": true,
+      "skipped": false,
+      "detail": "all five records match"
+    },
+    {
+      "check": "API accepts and persists a new order",
+      "weight": 5,
+      "passed": true,
+      "skipped": false,
+      "detail": "{\"amount\":\"12.34\",\"created_at\":\"2026-08-11T20:48:55.817474+00:00\",\"customer\":\"Verifier Probe 1786481334\",\"id\":7,\"status\":\"pending\"}"
+    },
+    {
+      "check": "systemd service active",
+      "weight": 5,
+      "passed": true,
+      "skipped": false,
+      "detail": "active"
+    },
+    {
+      "check": "systemd service enabled",
+      "weight": 5,
+      "passed": true,
+      "skipped": false,
+      "detail": "enabled"
+    },
+    {
+      "check": "service runs without root",
+      "weight": 5,
+      "passed": true,
+      "skipped": false,
+      "detail": "orders-api"
+    },
+    {
+      "check": "automatic restart policy",
+      "weight": 5,
+      "passed": true,
+      "skipped": false,
+      "detail": "on-failure"
+    },
+    {
+      "check": "PostgreSQL is not reachable from the internet",
+      "weight": 5,
+      "passed": true,
+      "skipped": false,
+      "detail": "tcp/5432 is closed or filtered"
+    },
+    {
+      "check": "PostgreSQL host configuration is private",
+      "weight": 5,
+      "passed": true,
+      "skipped": false,
+      "detail": "LISTEN:\n127.0.0.1:5432\nUFW:\nStatus: active\n\nTo                         Action      From\n--                         ------      ----\n22/tcp                     ALLOW       Anywhere                  \nNginx Full                 ALLOW       Anywhere                  \n22/tcp (v6)                ALLOW       Anywhere (v6)             \nNginx Full (v6)            ALLOW       Anywhere (v6)             \n\nHBA:\nlocal   all             postgres                                peer\nlocal   all             all                                     peer\nhost    all             all             127.0.0.1/32            scram-sha-256\nhost    all             all             ::1/128                 scram-sha-256\nlocal   replication     all                                     peer\nhost    replication     all             127.0.0.1/32            scram-sha-256\nhost    replication     all             ::1/128                 scram-sha-256"
+    },
+    {
+      "check": "environment file permissions",
+      "weight": 4,
+      "passed": true,
+      "skipped": false,
+      "detail": "640 root orders-api"
+    },
+    {
+      "check": "unsafe debug log removed or secured",
+      "weight": 3,
+      "passed": false,
+      "skipped": false,
+      "detail": "666 root root 67108864"
+    },
+    {
+      "check": "valid custom-format backup can be created",
+      "weight": 7,
+      "passed": true,
+      "skipped": false,
+      "detail": "/var/backups/orders-api/orders-20260811T204943Z.dump"
+    },
+    {
+      "check": "backup schedule enabled",
+      "weight": 3,
+      "passed": true,
+      "skipped": false,
+      "detail": "enabled\nWed 2026-08-12 02:21:37 UTC"
+    },
+    {
+      "check": "backup restores into a fresh database",
+      "weight": 10,
+      "passed": false,
+      "skipped": false,
+      "detail": "Не удается преобразовать значение \"pg_restore: error: could not open input file \"/var/backups/orders-api/orders-20260811T204943Z.dump\": Permission denied\nERROR:  relation \"orders\" does not exist\nLINE 1: SELECT count(*) FROM orders\n                             ^\" в тип \"System.Int32\". Ошибка: \"Входная строка имела неверный формат.\""
+    },
+    {
+      "check": "operator report exists and is substantive",
+      "weight": 3,
+      "passed": true,
+      "skipped": false,
+      "detail": "bytes=5309"
+    },
+    {
+      "check": "service recovers after SIGKILL",
+      "weight": 7,
+      "passed": true,
+      "skipped": false,
+      "detail": "state=active"
+    },
+    {
+      "check": "reboot recovery and data persistence",
+      "weight": 8,
+      "passed": true,
+      "skipped": false,
+      "detail": "health=ok; probeFound=True"
+    }
+  ]
+}

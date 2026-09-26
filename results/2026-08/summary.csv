@@ -1,0 +1,12 @@
+configuration,model,reasoning,harness,batch,final_score,score_source,verifier_raw_score,verifier_failed_checks,wall_time_s,active_ssh_window_s,total_tokens,ssh_calls,root_execve_calls,notes
+composer-2.5,Composer 2.5,default,Cursor,2,100,verifier v2,100,,,397,,37,2464,
+grok-4.6-high,Grok 4.6,high,,3,100,verifier v2,100,,,,,,,single follow-up run on 2026-08-12; harness and tokens not recorded
+grok-4.5-high,Grok 4.5,high,Cursor,1,99,hand-corrected (see notes),90,backup restores into a fresh database,423,411,819200,20,1749,Corrected rubric 100; manual -1 because test order was retained
+kimi-k3-max,Kimi K3,max,Cursor,1,98,hand-corrected (see notes),87,unsafe debug log removed or secured; backup restores into a fresh database,603,588,1500000,27,2032,Log permissions fixed but 64 MiB file retained
+luna-high,GPT-5.6 Luna,high,Cursor,1,97,hand-corrected (see notes),87,unsafe debug log removed or secured; backup restores into a fresh database,556,531,3011400,39,2982,2.9M + 111.4K usage entries; unsafe app.log retained
+opus-5-low,Claude Opus 5,low,Cursor,1,97,hand-corrected (see notes),87,unsafe debug log removed or secured; backup restores into a fresh database,807,794,3600000,29,2657,Deepest audit and report; unsafe app.log retained
+sol-low,GPT-5.6 Sol,low,Cursor,1,97,hand-corrected (see notes),87,unsafe debug log removed or secured; backup restores into a fresh database,337,310,1200000,18,1555,Fastest and fewest SSH calls; unsafe app.log retained
+gemini-3.6-flash-high,Gemini 3.6 Flash,high,Antigravity (Fast Mode),2,97,verifier v2,97,unsafe debug log secured and bounded,,740,,65,4734,
+sol-low-codex,GPT-5.6 Sol,low,Codex App,2,97,verifier v2,97,unsafe debug log secured and bounded,,382,,23,1796,harness inferred from configuration name
+sol-medium-cursor,GPT-5.6 Sol,medium,Cursor,2,97,verifier v2,97,unsafe debug log secured and bounded,,510,,18,1790,
+terra-medium-cursor,GPT-5.6 Terra,medium,Cursor,2,97,verifier v2,97,unsafe debug log secured and bounded,,349,,29,2123,
